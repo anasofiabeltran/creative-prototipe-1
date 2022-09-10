@@ -1,0 +1,32 @@
+.createGame{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 4%;
+    gap: 2rem;
+    background: #FAC14B;
+    border-radius: 4px;
+    padding: 4%;
+}
+
+.space_Name{
+    margin-top: 4%;
+}
+
+.space_CreateQuestion{
+    display: grid;
+    width: 100%;
+    /*grid-template-columns: 38vw 1fr;*/
+    gap: 2rem;
+}
+
+.space_CreateQuestion-questions{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.space_CreateQuestion-canvas{
+    margin: 0 8%;
+    width: 87%;
+}
