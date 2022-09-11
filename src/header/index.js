@@ -1,10 +1,11 @@
 import React from "react";
-import './headerCss.css'
+import './headerCss.css';
+
 
 function Header(props){
     return(
         <header>
-          <img src={props.logo}  alt="logo"/>  
+          <img src={props.logo}  alt="logo"/>
         </header>
     );
 }

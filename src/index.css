@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+html{
+  background-image: url(./assets/img/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #50d1cb;
+}
+
 button{
   background: #83DB29;
   border-radius: 50px;
