@@ -1,5 +1,8 @@
 import React from "react";
+import { Link} from "react-router-dom";
 import './singUpEstudentCss.css'
+
+
 function SingUp(){
     return(
         <div className="singUpEstudent">
@@ -31,9 +34,7 @@ function SingUp(){
                     <input type="text" id="CorreoAcudiente" name="CorreoAcudiente" />
                 </div>
                 <div className="singUpEstudent-buttons">
-                    <button>
-                        Registrarse
-                    </button>
+                    <Link className="buttonLink" to="/HomePage">Registrar</Link>
                     <button>
                         Cancelar
                     </button>

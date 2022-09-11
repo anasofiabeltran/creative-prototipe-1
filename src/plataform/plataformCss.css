@@ -1,0 +1,14 @@
+.plataform{
+    position: relative;
+}
+
+.plataform-menuBar-options{
+    position: absolute;
+    top: 12px;
+    right: 4vw;
+}
+
+.plataform-menuBar-options ul{
+    display: flex;
+    gap: 20px;
+}
