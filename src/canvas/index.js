@@ -6,8 +6,7 @@ function Canvas(){
         <section className="canvas">
             <button>EDITAR</button>
             <div className="canvas-interactive_resourse">
-                
-                <input placeholder="Insertar:"/>
+                <textarea placeholder="Insertar:" className="inputQuestion" />
             </div>
             <div className="canvas-questions">
                 <input placeholder="Respuesta 1"/>

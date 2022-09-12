@@ -10,7 +10,7 @@ function TemplateGame(){
         <section className="createGame">
             
             <div className="space_Name">
-                <input placeholder="Juego (nombre del juego)"/>
+                <input className="input-singUp" placeholder="Juego (nombre del juego)"/>
             </div>
             <div className="space_CreateQuestion">
                 <div className="space_CreateQuestion-questions">

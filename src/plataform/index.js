@@ -6,6 +6,7 @@ import { SingUp } from '../singUpEstudent';
 import { TemplateGame } from '../templateGame';
 import { HomePage } from '../homePage';
 import { Header } from '../header';
+import {SingUpMenu} from '../singUpMenu'
 
 import './plataformCss.css'
 
@@ -20,17 +21,18 @@ function Plataform(){
                 <nav className="plataform-menuBar-options">
                 <ul>
                     <li>
-                    <Link to="/singUpEstudent">Sing Up</Link>
+                    <Link to="/SingUpMenu">Sing Up</Link>
                     </li>
                     <li>
-                    <Link to="/singUpEstudent">login</Link>
+                    <Link to="/SingUpMenu">login</Link>
                     </li>
                 </ul>
                 </nav>
 
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
+                
                 <Routes>
+                <Route path="/creative-prototipe-1" element={<PrincipalPage />}>
+                </Route>{/*Esta ruta se utiliza para el prototipo.... */}
                 <Route path="/" element={<PrincipalPage />}>
                 </Route>
                 <Route path="/PrincipalPage" element={<PrincipalPage />}>
@@ -44,6 +46,8 @@ function Plataform(){
                 <Route path="/CreateGame/Fornite" element={<TemplateGame />}>
                 </Route>
                 <Route path="/HomePage" element={<HomePage />}>
+                </Route>
+                <Route path="/SingUpMenu" element={<SingUpMenu />}>
                 </Route>
                 </Routes>
             </div>

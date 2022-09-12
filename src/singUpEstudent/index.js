@@ -10,15 +10,15 @@ function SingUp(){
                 <div className="singUpEstudent-firstPart">
                     <label for="Nombre">Nombre</label>
                     <br />
-                    <input type="text" id="Nombre" name="Nombre" />
+                    <input className="input-singUp" type="text" id="Nombre" name="Nombre" />
                     <br />
                     <label for="Celular">Celular</label>
                     <br />
-                    <input type="number" id="Celular" name="Celular" />
+                    <input className="input-singUp" type="number" id="Celular" name="Celular" />
                     <br />
                     <label for="Institucion">Institucion</label>
                     <br />
-                    <input type="text" id="Institucion" name="Institucion" />
+                    <input className="input-singUp" type="text" id="Institucion" name="Institucion" />
                 </div>
                 <div className="singUpEstudent-secondPart">
                     <label for="Apellido">Apellido</label>
