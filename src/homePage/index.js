@@ -4,10 +4,18 @@ import './homePageCss.css'
 
 function HomePage(){
     return(
-        <section className="homePageEstudent">
-            <div className="homePageEstudent-card">
+        <section className="homePage">
+            <div className="homePage-card">
                 <Link className="buttonLink" to="/CreateGame">Crear Juego</Link>
-            </div>   
+            </div>
+            <div className="homePage-card">
+                <Link className="buttonLink" to="/SeeGrades">Ver calificaciones</Link>
+            </div>  
+            <div className="homePage-card">
+                <Link className="buttonLink" to="/PlayGame">Jugar</Link>
+            </div>
+
+            <Link className="buttonLink" to="/PrincipalPage">Cancelar</Link>     
         </section>
     );
 }

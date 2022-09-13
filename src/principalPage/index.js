@@ -1,17 +1,18 @@
 import React from "react";
-import beneficios from '../assets/img/beneficios.png'
-import play from '../assets/img/demo.png'
+import beneficios from '../assets/img/beneficios.png';
+import play from '../assets/img/demo.png';
+import './principalPageCss.css';
 
 function PrincipalPage(){
     return(
-    <React.Fragment>
+    <section className="principalPage">
       <div>
-      <img src={play} alt="tabla de beneficios"/>
+      <img className="demo" src={play} alt="demo"/>
       </div>
       <div>
-        <img src={beneficios} alt="tabla de beneficios"/>
+        <img className="principalPage-benefits_table" src={beneficios} alt="tabla de beneficios"/>
       </div>
-    </React.Fragment>
+    </section>
     );
 }
 

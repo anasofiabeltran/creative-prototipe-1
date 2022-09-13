@@ -1,0 +1,14 @@
+.principalPage{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.demo{
+    width: 100vw;
+}
+
+.principalPage-benefits_table{
+    width: 94vw;
+    margin-left: 4%; 
+}

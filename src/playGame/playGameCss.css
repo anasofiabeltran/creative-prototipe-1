@@ -1,0 +1,36 @@
+.playGame{
+    background: #FAC14B;
+    border-radius: 4px;
+    width: 84%;
+    margin: 8%;
+}
+
+.playGame-exitButton{
+    margin-left: 35%;
+}
+
+.playGame-interactivityImage{
+    
+}
+
+.interactivityImage{
+    margin: 8%;
+    width: 84%;
+    object-fit: contain;
+}
+
+.questionImage{
+    object-fit: contain;
+}
+
+.playGame-question_card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem ;
+}
+
+.playGame-question_card-statement{
+    place-self: center;
+}

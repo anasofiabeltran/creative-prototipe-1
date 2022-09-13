@@ -6,7 +6,9 @@ import { SingUp } from '../singUpEstudent';
 import { TemplateGame } from '../templateGame';
 import { HomePage } from '../homePage';
 import { Header } from '../header';
-import {SingUpMenu} from '../singUpMenu'
+import {SingUpMenu} from '../singUpMenu';
+import {SeeGrades} from '../seeGrades';
+import {PlayGame} from '../playGame';
 
 import './plataformCss.css'
 
@@ -48,6 +50,10 @@ function Plataform(){
                 <Route path="/HomePage" element={<HomePage />}>
                 </Route>
                 <Route path="/SingUpMenu" element={<SingUpMenu />}>
+                </Route>
+                <Route path="/SeeGrades" element={<SeeGrades />}>
+                </Route>
+                <Route path="/PlayGame" element={<PlayGame />}>
                 </Route>
                 </Routes>
             </div>

@@ -1,0 +1,28 @@
+.seeGrades{
+    background: #FAC14B;
+    border-radius: 4px;
+    margin: 4rem 2rem ;
+    padding: 2rem;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+.seeGrades-evaluation{
+    background: #FFFFFF;
+    border-radius: 26px;
+    display: flex;
+    gap: 1rem;
+    place-content: center;
+    padding: 0.9rem;
+    margin-top: 1rem;
+}
+
+.seeGrades-evaluation img{
+    object-fit: contain;
+}
+
+.homePage-exitButton{
+    position: absolute;
+    bottom: 12px;
+    left: 25vw;
+}
