@@ -23,15 +23,15 @@ function SingUp(){
                 <div className="singUpEstudent-secondPart">
                     <label for="Apellido">Apellido</label>
                     <br />
-                    <input type="text" id="Apellido" name="Apellido" />
+                    <input className="input-singUp" type="text" id="Apellido" name="Apellido" />
                     <br />
                     <label for="Correo">Correo</label>
                     <br />
-                    <input type="text" id="Correo" name="Correo" />
+                    <input className="input-singUp" type="text" id="Correo" name="Correo" />
                     <br />
                     <label for="CorreoAcudiente">Correo Acudiente</label>
                     <br />
-                    <input type="text" id="CorreoAcudiente" name="CorreoAcudiente" />
+                    <input className="input-singUp" type="text" id="CorreoAcudiente" name="CorreoAcudiente" />
                 </div>
                 <div className="singUpEstudent-buttons">
                     <Link className="buttonLink" to="/HomePage">Registrar</Link>

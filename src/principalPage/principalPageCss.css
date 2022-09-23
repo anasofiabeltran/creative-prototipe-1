@@ -6,9 +6,18 @@
 
 .demo{
     width: 100vw;
+    position: relative;
 }
 
 .principalPage-benefits_table{
     width: 94vw;
     margin-left: 4%; 
+}
+
+.DemoPlay{
+    height: 26%;
+    width: 22vw;
+    position: absolute;
+    top: 10%;
+    left: 13vw;
 }

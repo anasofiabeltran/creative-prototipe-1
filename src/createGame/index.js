@@ -18,7 +18,9 @@ function CreateGame(){
                         <Link className="buttonLink" to="/CreateGame/Fornite">ELEGIR</Link>
                     </div>
                 </div>
-                <div className="cardGame">
+                {
+                    /*
+                    <div className="cardGame">
                     <img src={fornite} alt="preview del juego"/>
                     <div className="cardGame-game_information">
                         <h3>Zombie</h3>
@@ -34,6 +36,9 @@ function CreateGame(){
                         <button> ELEGIR </button>
                     </div>
                 </div>
+                    */
+                }
+                
             </div>
         </section>
     );

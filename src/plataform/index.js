@@ -9,10 +9,13 @@ import { Header } from '../header';
 import {SingUpMenu} from '../singUpMenu';
 import {SeeGrades} from '../seeGrades';
 import {PlayGame} from '../playGame';
+import { DemoFirstGame } from "../demoFirstGame";
+
 
 import './plataformCss.css'
 
 import logo from '../assets/img/logo.png'
+
 
 function Plataform(){
     return(
@@ -54,6 +57,8 @@ function Plataform(){
                 <Route path="/SeeGrades" element={<SeeGrades />}>
                 </Route>
                 <Route path="/PlayGame" element={<PlayGame />}>
+                </Route>
+                <Route path="/DemoFirstGame" element={<DemoFirstGame />}>
                 </Route>
                 </Routes>
             </div>

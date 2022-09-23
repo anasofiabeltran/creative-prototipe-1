@@ -1,0 +1,30 @@
+.demoFirstGame{
+    background: #FAC14B;
+    border-radius: 4px;
+    width: 80%;
+    margin: 16% 0 0 10%;
+}
+
+.demoFirstGame-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    place-items: center;
+    padding: 8%;
+}
+
+.demoFirstGame-content-interactive{
+    width: 100%;
+}
+
+.demoFirstGame-content-questions{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 36vw;
+}
+
+.demoFirstGame-content-answer{
+    width: 154%;
+    margin-left: -28%;
+}
