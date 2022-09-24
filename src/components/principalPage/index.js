@@ -1,7 +1,7 @@
 import React from "react";
 import { Link} from "react-router-dom";
-import beneficios from '../assets/img/beneficios.png';
-import play from '../assets/img/demo.png';
+import beneficios from '../../assets/img/beneficios.png';
+import play from '../../assets/img/demo.png';
 import './principalPageCss.css';
 
 function PrincipalPage(){

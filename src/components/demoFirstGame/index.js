@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import { Link} from "react-router-dom";
-import interactividad from '../assets/img/interactividad.png';
-import interactividad_less_live_1 from '../assets/img/interactividad(2).png';
-import interactividad_less_live_2 from '../assets/img/interactividad(3).png';
-import interactividad_less_live_3 from '../assets/img/interactividad(4).png';
-import interactividad_less_live_4 from '../assets/img/interactividad(5).png';
-import questionImage from '../assets/img/questionImage.png'
+import interactividad from '../../assets/img/interactividad.png';
+import interactividad_less_live_1 from '../../assets/img/interactividad(2).png';
+import interactividad_less_live_2 from '../../assets/img/interactividad(3).png';
+import interactividad_less_live_3 from '../../assets/img/interactividad(4).png';
+import interactividad_less_live_4 from '../../assets/img/interactividad(5).png';
+import questionImage from '../../assets/img/questionImage.png'
 import './demoFirstGameCss.css';
 
 function DemoFirstGame(props){

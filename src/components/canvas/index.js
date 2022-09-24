@@ -9,9 +9,9 @@ function Canvas(){
                 <textarea placeholder="Insertar:" className="inputQuestion" />
             </div>
             <div className="canvas-questions">
-                <input placeholder="Respuesta 1"/>
-                <input placeholder="Respuesta 2"/>
-                <input placeholder="Respuesta 3"/>
+                <input className="input-singUp" placeholder="Respuesta 1"/>
+                <input className="input-singUp" placeholder="Respuesta 2"/>
+                <input className="input-singUp" placeholder="Respuesta 3"/>
             </div>
         </section>
     );

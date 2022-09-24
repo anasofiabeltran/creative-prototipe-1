@@ -1,7 +1,7 @@
 import React from "react";
 import { Link} from "react-router-dom";
-import interactividad from "../assets/img/interactividad.png";
-import questionImage from "../assets/img/questionImage.png";
+import interactividad from "../../assets/img/interactividad.png";
+import questionImage from "../../assets/img/questionImage.png";
 import './playGameCss.css';
 
 function PlayGame(){

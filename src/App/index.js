@@ -1,5 +1,5 @@
 import './App.css';
-import { Plataform } from '../plataform';
+import { Plataform } from '../components/plataform';
 import React from 'react';
 
 

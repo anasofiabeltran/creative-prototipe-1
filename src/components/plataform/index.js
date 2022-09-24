@@ -14,7 +14,7 @@ import { DemoFirstGame } from "../demoFirstGame";
 
 import './plataformCss.css'
 
-import logo from '../assets/img/logo.png'
+import logo from '../../assets/img/logo.png'
 
 
 function Plataform(){

@@ -1,7 +1,8 @@
 import React from "react";
 import "./createGameCss.css"
 import {Link} from "react-router-dom";
-import fornite from "../assets/img/fornite.png"
+import fornite from "../../assets/img/fornite.png"
+
 function CreateGame(){
    
     return(
@@ -40,6 +41,7 @@ function CreateGame(){
                 }
                 
             </div>
+            <Link className="buttonLink" to="/HomePage">Cancelar</Link> 
         </section>
     );
 }
