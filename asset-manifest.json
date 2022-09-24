@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/creative-prototipe-1/static/css/main.410036d1.css",
-    "main.js": "/creative-prototipe-1/static/js/main.25cac289.js",
+    "main.css": "/creative-prototipe-1/static/css/main.706f0914.css",
+    "main.js": "/creative-prototipe-1/static/js/main.7fe24391.js",
     "static/js/787.0210447f.chunk.js": "/creative-prototipe-1/static/js/787.0210447f.chunk.js",
+    "static/media/interactividad(2).png": "/creative-prototipe-1/static/media/interactividad(2).fee11a38b88b7d75ec97.png",
+    "static/media/interactividad(3).png": "/creative-prototipe-1/static/media/interactividad(3).ed4a44c32c6c7c50a306.png",
+    "static/media/interactividad(4).png": "/creative-prototipe-1/static/media/interactividad(4).4fe0b985dbb3d7545b07.png",
+    "static/media/interactividad(5).png": "/creative-prototipe-1/static/media/interactividad(5).a93c8d9d08ae627196f9.png",
     "static/media/interactividad.png": "/creative-prototipe-1/static/media/interactividad.afdb537eccbb7d09fcdf.png",
+    "static/media/demo.png": "/creative-prototipe-1/static/media/demo.01391f55164f609981b4.png",
     "static/media/fondo.png": "/creative-prototipe-1/static/media/fondo.b065e1e2a7e0450e96df.png",
     "static/media/logo.png": "/creative-prototipe-1/static/media/logo.4f84e0251e846fcad604.png",
-    "static/media/demo.png": "/creative-prototipe-1/static/media/demo.8042044087ffb3d86d35.png",
     "index.html": "/creative-prototipe-1/index.html",
-    "main.410036d1.css.map": "/creative-prototipe-1/static/css/main.410036d1.css.map",
-    "main.25cac289.js.map": "/creative-prototipe-1/static/js/main.25cac289.js.map",
+    "main.706f0914.css.map": "/creative-prototipe-1/static/css/main.706f0914.css.map",
+    "main.7fe24391.js.map": "/creative-prototipe-1/static/js/main.7fe24391.js.map",
     "787.0210447f.chunk.js.map": "/creative-prototipe-1/static/js/787.0210447f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.410036d1.css",
-    "static/js/main.25cac289.js"
+    "static/css/main.706f0914.css",
+    "static/js/main.7fe24391.js"
   ]
 }
