@@ -1,0 +1,33 @@
+@media (min-width: 785px) {
+    .titleCreative,
+    .demo,
+    .principalPage-benefits_table,
+    .MenuOptionsDemo{
+        margin: -1vw calc(50% - 399px) 4vw;
+    }
+  
+    
+    .callActionPrincipalPage{
+        margin: -1vw calc(50% - 290px) 4vw;
+    }
+
+    .demoFirstGame{
+        margin: 4vw calc(50% - 399px) 4vw;
+    }
+
+    button,a{
+        padding: 2%;
+        max-width: 364px;
+        margin: 0 calc(50% - 13%);
+    }
+
+    .singUpEstudent{
+        margin: 4vw calc(50% - 240px) 4vw;
+    }
+
+    .demoFirstGame-content-questions{
+        margin-left: 22%;
+    }
+
+   
+  }

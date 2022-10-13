@@ -60,7 +60,9 @@ function DemoFirstGame(props){
                 <Link to="/PrincipalPage"> CANCELAR </Link>
                 <img className="demoFirstGame-content-interactive" src={image} alt="imagen preview game"/>
                 <div className="demoFirstGame-content-questions">
-                    <img src={questionImage} alt="pregunta imagen" />
+                    <div className="demoFirstGame-content-questions-img">
+                        <img src={questionImage} alt="pregunta imagen" />
+                    </div>
                     <button onClick={() => answerQuestion(false) } className="demoFirstGame-content-answer">Respuesta 1 este es el contenido de la respuesta 1</button>
                     <button onClick={() => answerQuestion(true) } className="demoFirstGame-content-answer">Respuesta 2</button>
                     <button onClick={() => answerQuestion(false) } className="demoFirstGame-content-answer">Respuesta 3</button>

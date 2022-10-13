@@ -3,6 +3,7 @@
     border-radius: 4px;
     width: 80%;
     margin: 16% 0 0 10%;
+    max-width: 742px;
 }
 
 .demoFirstGame-content{
@@ -22,9 +23,15 @@
     flex-direction: column;
     gap: 2rem;
     width: 36vw;
+    max-width: 340px;
 }
 
 .demoFirstGame-content-answer{
     width: 154%;
     margin-left: -28%;
+}
+.demoFirstGame-content-questions-img img{
+    margin: 0 calc(50% - 60%);
+    width: 43vw;
+    max-width: 291px;
 }

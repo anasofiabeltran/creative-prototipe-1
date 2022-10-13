@@ -5,14 +5,15 @@ import play from '../../assets/img/demo.png';
 import { CallActionPrincipalPage } from "../callActionPrincipalPage";
 import title from '../../assets/img/creativeTitle.png';
 import './principalPageCss.css';
+import { MenuDemo } from "../menuDemo";
 
 function PrincipalPage(){
     return(
     <section className="principalPage">
       <div>
       <img className="titleCreative" src={title} />
-      <img className="demo" src={play} alt="demo"/>
-      <Link to="/DemoFirstGame"> <div className="DemoPlay"></div></Link>
+      <MenuDemo />
+      {/* <img className="demo" src={play} alt="demo"/>*/}
       </div>
       <div>
         <img className="principalPage-benefits_table" src={beneficios} alt="tabla de beneficios"/>

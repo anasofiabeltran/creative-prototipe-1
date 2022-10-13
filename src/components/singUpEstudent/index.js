@@ -94,6 +94,7 @@ function SingUp(){
                 </div>
                 <div className="singUpEstudent-buttons">
                     {/*<Link className="buttonLink" to="/HomePage">Registrar</Link>*/}
+                    
                     <button type="button" onClick={singUp}>
                         Registrar
                     </button>

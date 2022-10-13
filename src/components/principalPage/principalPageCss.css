@@ -7,22 +7,18 @@
 .demo{
     width: 100vw;
     position: relative;
+    max-width: 790px;
 }
 
 .principalPage-benefits_table{
     width: 94vw;
     margin-left: 4%; 
+    max-width: 770px;
 }
 
-.DemoPlay{
-    height: 26%;
-    width: 22vw;
-    position: absolute;
-    top: 10%;
-    left: 13vw;
-}
 
 .titleCreative{
-    margin: -2vw 0 8vw;
+    margin: -1vw 0vw 4vw;
     width: 100vw;
+    max-width: 784px;
 }

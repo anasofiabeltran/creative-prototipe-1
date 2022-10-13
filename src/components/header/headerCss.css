@@ -1,14 +1,14 @@
 header{
     background-color: antiquewhite;
-    height: 2.5rem;
+    height: 3.5rem;
 }
 
-.header-logo{
-    
+.header-logo a{
+    margin: 0;
 }
 
 .header-logo img{
     object-fit: cover;
-    height: 1.8rem;
+    height: 2.5rem;
     margin: 8px 0 0 12px;
 }
