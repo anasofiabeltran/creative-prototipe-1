@@ -12,7 +12,7 @@ function SingUpMenu(){
                 </Link>
           
             
-                <Link className="buttonLink" to="/singUpEstudent">
+                <Link className="buttonLink" to="/registrarProfesor">
                     Docente
                 </Link>
             

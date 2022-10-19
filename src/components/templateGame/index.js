@@ -1,32 +1,60 @@
 import React, {useState} from "react";
 import "../createGame/createGameCss.css";
+import "./templateGameCss.css";
 import { Canvas } from "../canvas";
-import {Question} from "../question";
 import { Modal } from '../modal';
 import { UseModal } from '../../hooks/useModal';
 import { Link} from "react-router-dom";
+import {createUser} from "../../utils/index"
 
 function TemplateGame(){
 
-    function createQuestion(){
-        setNumberQuestion(question => [...question,<Question numero={number+1}/> ]);
-        setNumber(number+1);
-    }
     const [isOpenModalCompartir, openModalCompartir, closeModalCompartir] = UseModal(false);
-    const [number, setNumber] = useState(1);
-    const [numberQuestions, setNumberQuestion] = useState([<Question numero={number}/>]);
+    
+
+    /*guardar juego*/
+    const [game, setGame] = useState({ });
+    function saveGame(){
+        const gameName = document.getElementById("gameName").value;
+        let newGame={
+            "nombre": gameName,
+            "numPreguntas":1,
+            "preguntas": []
+        }
+        
+        fetch("http://localhost:3001/api/consultarDatosJuego", {
+            method: 'POST',
+            body: JSON.stringify({gameName}), 
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            if(response == null){
+                setGame( newGame  );
+                createUser(newGame,'/crearJuego');
+            }else{
+                alert('juego ya ha sido creado...escoja otro nombre')
+            }
+        }
+        );
+        
+    }
+
+   
+
+        
+    
+
     return(
         <section className="createGame">
             
             <div className="space_Name">
-                <input className="input-singUp" placeholder="Juego (nombre del juego)"/>
+                <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)"/>
             </div>
             <div className="space_CreateQuestion">
-                <div className="space_CreateQuestion-questions">
-                    {numberQuestions}
-                    <button onClick={createQuestion}> Añadir pregunta</button>
-                </div>
-                <hr />
                 <div className="space_CreateQuestion-canvas">
                     <Canvas />
                 </div>
@@ -39,7 +67,7 @@ function TemplateGame(){
                     <input placeholder="compartir con..." />
                     <button>Enviar</button>
                 </Modal>
-                <button>GUARDAR</button>
+                <button onClick={saveGame}>GUARDAR</button>
                 <Link className="buttonLink" to="/CreateGame">Cancelar</Link> 
         
         </section>

@@ -5,15 +5,15 @@ function CallActionPrincipalPage(){
     return(
         <div className="callActionPrincipalPage">
             <section className="callActionPrincipalPage-form">
-                    <label for="Nombre">Nombre</label>
+                    <label htmlFor="Nombre">Nombre</label>
                     <br />
                     <input className="input-singUp" type="text" id="Nombre" name="Nombre" />
                     <br />
-                    <label for="Nombre">Correo</label>
+                    <label htmlFor="Nombre">Correo</label>
                     <br />
                     <input className="input-singUp" type="text" id="Nombre" name="Nombre" />
                     <br />
-                    <label for="Nombre">Tipo de plan</label>
+                    <label htmlFor="Nombre">Tipo de plan</label>
                     <br />
                     <input className="input-singUp" type="text" id="Nombre" name="Nombre" />
                     <br />

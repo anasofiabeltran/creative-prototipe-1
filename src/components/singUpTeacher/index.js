@@ -1,23 +1,23 @@
+import {createUser} from "../../utils/index"
 import React, {useState} from "react";
-import './singUpEstudentCss.css'
-import {createUser,getEstudents} from "../../utils/index"
+import '../singUpEstudent/singUpEstudentCss.css'
 import {Link} from "react-router-dom";
 
 
-function SingUp(){
+function SingUpTeacher(){
     const [user, setUser] = useState({ });
 
 
-    function singUp() {
+    function singUpTeacher() {
 
         const userName= document.getElementById("Nombre").value;
         const userLastname= document.getElementById("Apellido").value;
         const Institucion= document.getElementById("Institucion").value;
         const numPhone= document.getElementById("Celular").value;
         const email= document.getElementById("Correo").value;
-        const parentEmail= document.getElementById("CorreoAcudiente").value;
+        const cargo= document.getElementById("Cargo").value;
         const password= document.getElementById("Password").value;
-        const targetaId= document.getElementById("targetaId").value;
+        const cedula= document.getElementById("Cedula").value;
 
         setUser(
             {
@@ -26,13 +26,12 @@ function SingUp(){
                 "institucion":Institucion,
                 "apellido":userLastname,
                 "correo":email,
-                "correoAcudiente":parentEmail,
+                "cargo":cargo,
                 "contrasena":password,
-                "targetaId": targetaId
+                "cedula": cedula
             }
         )
-
-        createUser(user,'/registrarEstudiante');
+        createUser(user,'/registrarProfesor');
     }
     return(
         <div className="singUpEstudent">
@@ -59,23 +58,23 @@ function SingUp(){
                     <br />
                     <input className="input-singUp" type="text" id="Correo" name="Correo" />
                     <br />
-                    <label htmlFor="CorreoAcudiente">Correo Acudiente</label>
+                    <label htmlFor="Cargo">Materia dictada - Cargo</label>
                     <br />
-                    <input className="input-singUp" type="text" id="CorreoAcudiente" name="CorreoAcudiente" />
+                    <input className="input-singUp" type="text" id="Cargo" name="Cargo" />
                 </div>
                 <div className="singUpEstudent-secondPart">
                     <label htmlFor="Password">Contraseña</label>
                     <br />
                     <input className="input-singUp" type="text" id="Password" name="Password" />
                     <br />
-                    <label htmlFor="targetaId">Targeta Id o CC</label>
+                    <label htmlFor="Cedula">Cedula</label>
                     <br />
-                    <input className="input-singUp" type="number" id="targetaId" name="targetaId" />
+                    <input className="input-singUp" type="number" id="Cedula" name="Cedula" />
                 </div>
                 <div className="singUpEstudent-buttons">
                     {/*<Link className="buttonLink" to="/HomePage">Registrar</Link>*/}
                     
-                    <button type="button" onClick={singUp}>
+                    <button type="button" onClick={singUpTeacher}>
                         <Link className="buttonLink" to="/HomePage">Registrar</Link>
                     </button>
                     <button>
@@ -88,4 +87,5 @@ function SingUp(){
     );
 }
 
-export {SingUp};
+
+export {SingUpTeacher};

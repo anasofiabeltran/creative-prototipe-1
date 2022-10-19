@@ -29,5 +29,17 @@
         margin-left: 22%;
     }
 
+    .createGame{
+        max-width: 800px;
+        margin-left: 22%;
+    }
+
+    .space_CreateQuestion-canvas {
+        max-width: 700px;
+    }
+
+    .canvas-interactive_resourse {
+        max-width: 650px;
+    }
    
   }
