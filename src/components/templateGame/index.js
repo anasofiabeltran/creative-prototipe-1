@@ -5,7 +5,9 @@ import { Canvas } from "../canvas";
 import { Modal } from '../modal';
 import { UseModal } from '../../hooks/useModal';
 import { Link} from "react-router-dom";
-import {createUser} from "../../utils/index"
+import {createUser} from "../../utils/index";
+import { NumberModal } from '../../hooks/numberModal';
+import {Question} from "../question";
 
 function TemplateGame(){
 
@@ -43,20 +45,35 @@ function TemplateGame(){
         
     }
 
-   
+    /*cambiar pregunta */
+    const [selectQuestion, setSelectQuestion]= useState(1);
 
+   /*crear preview de las preguntas */
+   function createQuestion(){
+        setNumberQuestion(q => [...q,<div><Question numero={number+1}/> <button onClick={() => setSelectQuestion(number+1)}>Elegir preguna</button></div> ]);
+        changeQuestion(number+1);
+        setSelectQuestion(number+1);
+    }
+
+    
+    const [number, changeQuestion] = NumberModal(1);
+    const [numberQuestions, setNumberQuestion] = useState([<div><Question numero={number}/> <button onClick={() => setSelectQuestion(1)}>Elegir preguna</button></div>]);
+    
         
     
 
     return(
         <section className="createGame">
-            
             <div className="space_Name">
                 <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)"/>
             </div>
+            <div className="space_CreateQuestion-questions">
+                    {numberQuestions}
+                    <button onClick={createQuestion}> Añadir pregunta</button>
+            </div>
             <div className="space_CreateQuestion">
                 <div className="space_CreateQuestion-canvas">
-                    <Canvas />
+                    <Canvas selectedQuestion={selectQuestion}/>
                 </div>
             </div>
                 <button className="buttonModal" onClick={openModalCompartir}>

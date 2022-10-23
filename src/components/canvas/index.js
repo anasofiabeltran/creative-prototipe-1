@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./canvasCss.css";
 import {addGameQuestion} from "../../utils/index";
-import {Question} from "../question";
+
 
 
 function Canvas(props){
@@ -28,33 +28,14 @@ function Canvas(props){
         questions.push(newQuestion);
     }
 
-    /*cambiar pregunta */
-    function changeQuestion(question){
-        console.log(questions[props.numQuestion]);
-    }
-
-    /*crear preview de las preguntas */
-    function createQuestion(){
-        setNumberQuestion(question => [...question,<Question numero={number+1}/> ]);
-        setNumber(number+1);
-    }
-
-    const [number, setNumber] = useState(1);
-    const [numberQuestions, setNumberQuestion] = useState([<Question numero={number}/>]);
+    
 
 
     return(
         <section className="canvas">
-            <div className="space_CreateQuestion-questions">
-                    {numberQuestions}
-                    <button onClick={createQuestion}> Añadir pregunta</button>
-            </div>
-            <br />
-            <hr />
-            <br />
+            <p> pregunta seleccionada {props.selectedQuestion}</p>
             <button onClick={addQuestion}>EDITAR</button>
             <br />
-            <p> numero de pregunta: {number}</p>
             <div className="canvas-interactive_resourse">
                 <textarea id="question" placeholder="Insertar:" className="inputQuestion" />
             </div>
