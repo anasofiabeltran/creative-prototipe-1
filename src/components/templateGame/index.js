@@ -13,20 +13,24 @@ function TemplateGame(){
 
     const [isOpenModalCompartir, openModalCompartir, closeModalCompartir] = UseModal(false);
     
+    /*nombrar juego */
+    const [game, setGame] = useState();
+    const changeName = (newName) =>{
+        setGame(newName.target.value);
+    }
 
     /*guardar juego*/
-    const [game, setGame] = useState({ });
+    
     function saveGame(){
-        const gameName = document.getElementById("gameName").value;
         let newGame={
-            "nombre": gameName,
+            "nombre": game,
             "numPreguntas":1,
             "preguntas": []
         }
         
         fetch("http://localhost:3001/api/consultarDatosJuego", {
             method: 'POST',
-            body: JSON.stringify({gameName}), 
+            body: JSON.stringify({game}), 
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -35,7 +39,6 @@ function TemplateGame(){
         .catch(error => console.error('Error:', error))
         .then(response => {
             if(response == null){
-                setGame( newGame  );
                 createUser(newGame,'/crearJuego');
             }else{
                 alert('juego ya ha sido creado...escoja otro nombre')
@@ -65,7 +68,7 @@ function TemplateGame(){
     return(
         <section className="createGame">
             <div className="space_Name">
-                <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)"/>
+                <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)" onChange={changeName}/>
             </div>
             <div className="space_CreateQuestion-questions">
                     {numberQuestions}
@@ -73,7 +76,7 @@ function TemplateGame(){
             </div>
             <div className="space_CreateQuestion">
                 <div className="space_CreateQuestion-canvas">
-                    <Canvas selectedQuestion={selectQuestion}/>
+                    <Canvas gamename={game} selectedQuestion={selectQuestion}/>
                 </div>
             </div>
                 <button className="buttonModal" onClick={openModalCompartir}>
