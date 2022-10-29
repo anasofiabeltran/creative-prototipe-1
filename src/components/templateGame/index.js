@@ -28,9 +28,11 @@ function TemplateGame(){
             "preguntas": []
         }
         
+
+
         fetch("http://localhost:3001/api/consultarDatosJuego", {
             method: 'POST',
-            body: JSON.stringify({game}), 
+            body: JSON.stringify({"gameName":game}), 
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -38,37 +40,65 @@ function TemplateGame(){
         .then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => {
+
             if(response == null){
                 createUser(newGame,'/crearJuego');
+                document.getElementById("gameName").style.visibility = "hidden";
             }else{
                 alert('juego ya ha sido creado...escoja otro nombre')
             }
+        
         }
         );
-        
+  
     }
 
     /*cambiar pregunta */
     const [selectQuestion, setSelectQuestion]= useState(1);
+    const [createdQuestions, setCreatedQuestions]= useState([]);
+
+    async function obtainQuestions(){
+        await fetch("http://localhost:3001/api/consultarDatosJuego", {
+            method: 'POST',
+            body: JSON.stringify({"gameName":game}), 
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            console.log('obteniendo preguntas: ', response);
+            setCreatedQuestions(response);
+        }
+        );
+
+    }
+
+    async function changeToOtherQuestion(n){
+        await obtainQuestions();
+        setSelectQuestion(n);
+    }
 
    /*crear preview de las preguntas */
-   function createQuestion(){
-        setNumberQuestion(q => [...q,<div><Question numero={number+1}/> <button onClick={() => setSelectQuestion(number+1)}>Elegir preguna</button></div> ]);
+   async function createQuestion(){
+        await obtainQuestions();
+        setNumberQuestion(q => [...q,<div><Question numero={number+1}/> <button onClick={() => changeToOtherQuestion(number+1)}>Elegir preguna</button></div> ]);
         changeQuestion(number+1);
         setSelectQuestion(number+1);
+        
     }
 
     
-    const [number, changeQuestion] = NumberModal(1);
+    const [number, changeQuestion] = useState(1); //preguntas creadas
     const [numberQuestions, setNumberQuestion] = useState([<div><Question numero={number}/> <button onClick={() => setSelectQuestion(1)}>Elegir preguna</button></div>]);
     
         
-    
-
     return(
         <section className="createGame">
+            <h3>nombre del juego:  {game}</h3>
             <div className="space_Name">
-                <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)" onChange={changeName}/>
+                <input id="gameName" className="input-singUp" placeholder="Juego (nombre del juego)" onChange={changeName} onBlur={saveGame}/>
             </div>
             <div className="space_CreateQuestion-questions">
                     {numberQuestions}
@@ -76,7 +106,7 @@ function TemplateGame(){
             </div>
             <div className="space_CreateQuestion">
                 <div className="space_CreateQuestion-canvas">
-                    <Canvas gamename={game} selectedQuestion={selectQuestion}/>
+                    <Canvas gamename={game} selectedQuestion={selectQuestion} questions={createdQuestions}/>
                 </div>
             </div>
                 <button className="buttonModal" onClick={openModalCompartir}>
@@ -87,7 +117,7 @@ function TemplateGame(){
                     <input placeholder="compartir con..." />
                     <button>Enviar</button>
                 </Modal>
-                <button onClick={saveGame}>GUARDAR</button>
+ 
                 <Link className="buttonLink" to="/CreateGame">Cancelar</Link> 
         
         </section>

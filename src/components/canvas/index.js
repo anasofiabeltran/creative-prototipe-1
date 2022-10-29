@@ -23,25 +23,42 @@ function Canvas(props){
 
     }
 
-    
-    
-    return(
-        <section className="canvas">
-            <p> pregunta seleccionada {props.selectedQuestion}</p>
-            <button onClick={addQuestion}>EDITAR</button>
-            <br />
-            <div className="canvas-interactive_resourse">
-                <textarea id="statementQuestion" placeholder="Insertar:" className="inputQuestion" />
-            </div>
-            <div className="canvas-questions">
-                <input id="answere-1" className="input-singUp" placeholder="pregunta 1"/>
-                <input id="answere-2" className="input-singUp" placeholder="pregunta 2"/>
-                <input id="answere-3" className="input-singUp" placeholder="pregunta 3"/>
-            </div>
-        </section>
-    );    
-    
 
+    console.log('pregunta elegida para resolver: ', props.selectedQuestion, props.questions)
+    if (props.questions != null && props.questions.length != 0){
+        if (props.questions.preguntas[props.selectedQuestion-1] != undefined ){
+            return(
+                <section className="canvas">
+                    <p> pregunta seleccionada {props.selectedQuestion}</p>
+                    <button onClick={addQuestion}>EDITAR</button>
+                    <br />
+                    <div className="canvas-interactive_resourse">
+                        <textarea id="statementQuestion" value={props.questions.preguntas[props.selectedQuestion-1].pregunta} className="inputQuestion" />
+                    </div>
+                    <div className="canvas-questions">
+                        <input id="answere-1" className="input-singUp" value={props.questions.preguntas[props.selectedQuestion-1].posiblesRespuestas[0] }/>
+                        <input id="answere-2" className="input-singUp" value={props.questions.preguntas[props.selectedQuestion-1].posiblesRespuestas[1] }/>
+                        <input id="answere-3" className="input-singUp" value={props.questions.preguntas[props.selectedQuestion-1].posiblesRespuestas[2]}/>
+                    </div>
+                </section>
+            );    
+        }
+    }
+        return(
+            <section className="canvas">
+                <p> pregunta seleccionada {props.selectedQuestion}</p>
+                <button onClick={addQuestion}>EDITAR</button>
+                <br />
+                <div className="canvas-interactive_resourse">
+                    <textarea id="statementQuestion" placeholder="Insertar:" className="inputQuestion" />
+                </div>
+                <div className="canvas-questions">
+                    <input id="answere-1" className="input-singUp" placeholder="respuesta 1"/>
+                    <input id="answere-2" className="input-singUp" placeholder="respuesta 2"/>
+                    <input id="answere-3" className="input-singUp" placeholder="respuesta 3"/>
+                </div>
+            </section>
+        );    
     
 }
 
