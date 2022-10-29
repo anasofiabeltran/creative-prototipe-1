@@ -30,7 +30,7 @@ function TemplateGame(){
         
 
 
-        fetch("http://localhost:3001/api/consultarDatosJuego", {
+        fetch("https://creativebackend.herokuapp.com/api/consultarDatosJuego", {
             method: 'POST',
             body: JSON.stringify({"gameName":game}), 
             headers: {
@@ -58,7 +58,7 @@ function TemplateGame(){
     const [createdQuestions, setCreatedQuestions]= useState([]);
 
     async function obtainQuestions(){
-        await fetch("http://localhost:3001/api/consultarDatosJuego", {
+        await fetch("https://creativebackend.herokuapp.com/api/consultarDatosJuego", {
             method: 'POST',
             body: JSON.stringify({"gameName":game}), 
             headers: {

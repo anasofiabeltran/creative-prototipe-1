@@ -1,6 +1,8 @@
 //url base
 //let BASE = "https://infinite-cove-11379.herokuapp.com/api/"
-let BASE = "http://localhost:3001/api";
+//let BASE = "http://localhost:3001/api";
+let BASE = "https://creativebackend.herokuapp.com/";
+
 
 function createUser(user,url){
     fetch(BASE + url, {

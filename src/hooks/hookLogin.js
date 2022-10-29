@@ -6,7 +6,7 @@ export const HookLogin = () => {
   const[isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
-  const search = (nameLogin, password) => {fetch("http://localhost:3001/api/consultarDatosEstudiante/"+nameLogin)
+  const search = (nameLogin, password) => {fetch("https://creativebackend.herokuapp.com/api/consultarDatosEstudiante/"+nameLogin)
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => {
