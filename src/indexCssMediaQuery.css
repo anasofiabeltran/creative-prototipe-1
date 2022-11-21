@@ -41,5 +41,14 @@
     .canvas-interactive_resourse {
         max-width: 650px;
     }
+
+    .playGame {
+        margin-left: calc(30%);
+        max-width: 636px;
+    }
+
+    .questionImage{
+        max-width: 216px;
+    }
    
   }

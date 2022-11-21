@@ -21,6 +21,7 @@
 
 .questionImage{
     object-fit: contain;
+    max-width: 100px;
 }
 
 .playGame-question_card{

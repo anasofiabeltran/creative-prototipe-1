@@ -12,7 +12,7 @@ function HomePage(){
                 <Link className="buttonLink" to="/SeeGrades">Ver calificaciones</Link>
             </div>  
             <div className="homePage-card">
-                <Link className="buttonLink" to="/PlayGame">Jugar</Link>
+                <Link className="buttonLink" to="/menuJuegos">Jugar</Link>
             </div>
 
             <Link className="buttonLink" to="/PrincipalPage">Cancelar</Link>     

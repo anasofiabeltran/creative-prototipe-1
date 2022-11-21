@@ -12,10 +12,13 @@ import {PlayGame} from '../playGame';
 import { DemoFirstGame } from "../demoFirstGame";
 import { SingUpTeacher } from "../singUpTeacher";
 import { Login } from "../login";
+import { MenuGames } from "../menuGames";
+
 
 import './plataformCss.css'
 
 import logo from '../../assets/img/logo.png'
+
 
 
 
@@ -28,10 +31,10 @@ function Plataform(){
                 <nav className="plataform-menuBar-options">
                 <ul>
                     <li>
-                    <Link to="/SingUpMenu">Sing Up</Link>
+                    <Link to="/SingUpMenu">Registrarse</Link>
                     </li>
                     <li>
-                    <Link to="/loguearse">login</Link>
+                    <Link to="/loguearse">Ingresar</Link>
                     </li>
                 </ul>
                 </nav>
@@ -58,13 +61,15 @@ function Plataform(){
                 </Route>
                 <Route path="/SeeGrades" element={<SeeGrades />}>
                 </Route>
-                <Route path="/PlayGame" element={<PlayGame />}>
+                <Route path="/PlayGame/:game" element={<PlayGame />}>
                 </Route>
                 <Route path="/DemoFirstGame" element={<DemoFirstGame />}>
                 </Route>
                 <Route path="/registrarProfesor" element={<SingUpTeacher />}>
                 </Route>
                 <Route path="/loguearse" element={<Login />}>
+                </Route>
+                <Route path="/menuJuegos" element={<MenuGames />}>
                 </Route>
                 </Routes>
             </div>
