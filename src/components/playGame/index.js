@@ -4,21 +4,21 @@ import interactividad from "../../assets/img/interactividad.png";
 import './playGameCss.css';
 import { useParams } from 'react-router-dom';
 import { HookGame } from '../../hooks/hookGame';
-
-
+import {qualifyActivity} from "../../utils/index"
 
 
 function PlayGame(){
     const [obtainGame,questions] = HookGame();
     const name = useParams();
-    
+    const [user,setUser] = useState({})
     function showGrade(){
-        console.log(document.getElementById('numberGrade').value)
+        qualifyActivity({"grade": (document.getElementById('numberGrade').value*5)/questions.length,"creator":"ana","responder":user.nombre,"test": name.game})
     }
 
     useEffect(()=>{
         console.log('juego: ',name);
-        obtainGame(name.game);          
+        obtainGame(name.game);
+        setUser(JSON.parse(localStorage.getItem('user')))      
     }, [])
 
 

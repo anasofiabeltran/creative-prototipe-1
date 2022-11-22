@@ -22,14 +22,17 @@ function TemplateGame(){
     /*guardar juego*/
     
     function saveGame(){
+        
+        
         let newGame={
             "nombre": game,
+            "creator":JSON.parse(localStorage.getItem('user')).nombre,
             "numPreguntas":1,
             "preguntas": []
         }
+        console.log(newGame)
+
         
-
-
         fetch("https://creativebackend.herokuapp.com/api/consultarDatosJuego", {
             method: 'POST',
             body: JSON.stringify({"gameName":game}), 
@@ -50,7 +53,7 @@ function TemplateGame(){
         
         }
         );
-  
+ 
     }
 
     /*cambiar pregunta */

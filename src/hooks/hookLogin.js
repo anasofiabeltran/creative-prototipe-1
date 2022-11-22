@@ -2,8 +2,7 @@ import { useState } from "react";
 import {useNavigate} from "react-router-dom";
 
 export const HookLogin = () => {
-
-  const[isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
   const search = (nameLogin, password) => {fetch("http://localhost:3001/api/consultarDatosEstudiante/"+nameLogin+'/'+password)
@@ -13,6 +12,10 @@ export const HookLogin = () => {
         if(response){
           setIsLogin(true);
           navigate("/HomePage/Estudiante")
+          localStorage['user'] = JSON.stringify({
+            "tipo":"Estudiante",
+            "nombre":nameLogin
+          });
         }else{
           alert('contraseña o usuario incorrecto')
         }
@@ -26,6 +29,10 @@ export const HookLogin = () => {
           if(response){
               setIsLogin(true);
               navigate("/HomePage/Docente")
+              localStorage['user'] = JSON.stringify({
+                "tipo":"Docente",
+                "nombre":nameLogin
+              });
           }else{
             alert('contraseña o usuario incorrecto')
           }
