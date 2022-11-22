@@ -29,7 +29,7 @@ function MenuGames(props){
                         <div className="cardGame-game_information">
                             <h3>{item.nombre}</h3>
                             <p> Descripción del juego</p>
-                            <Link className="buttonLink" to={`/PlayGame/${item.nombre}`}>ELEGIR</Link>
+                            <Link className="buttonLink" to={'/PlayGame/'+item.nombre}>ELEGIR</Link>
                         </div>
                     </div>       
                 ))

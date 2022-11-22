@@ -55,7 +55,9 @@ function Plataform(){
                 </Route>
                 <Route path="/CreateGame/Fornite" element={<TemplateGame />}>
                 </Route>
-                <Route path="/HomePage" element={<HomePage />}>
+                <Route path="/HomePage/Estudiante" element={<HomePage type="Estudent"/>}>
+                </Route>
+                <Route path="/HomePage/Docente" element={<HomePage  type="Teacher"/>}>
                 </Route>
                 <Route path="/SingUpMenu" element={<SingUpMenu />}>
                 </Route>

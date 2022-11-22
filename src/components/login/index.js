@@ -5,7 +5,7 @@ import { HookLogin } from '../../hooks/hookLogin';
 
 function Login(){
 
-    const [isLogin,search] = HookLogin();
+    const [isLogin,search,searchTeacher] = HookLogin();
 
     let userName = " ", userPassword= " ",selection = "estudiante";
 
@@ -31,7 +31,7 @@ function Login(){
 
            
         } else if (selection== "profesor"){
-            alert('entro un profesor')
+            searchTeacher(userName,userPassword);
         }
     }
 

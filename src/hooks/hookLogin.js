@@ -6,18 +6,30 @@ export const HookLogin = () => {
   const[isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
-  const search = (nameLogin, password) => {fetch("https://creativebackend.herokuapp.com/api/consultarDatosEstudiante/"+nameLogin)
+  const search = (nameLogin, password) => {fetch("http://localhost:3001/api/consultarDatosEstudiante/"+nameLogin+'/'+password)
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => {
-        if(response!=null){
-            if(response.contrasena == password){
-                setIsLogin(true);
-                navigate("/HomePage")
-            }
-        
+        if(response){
+          setIsLogin(true);
+          navigate("/HomePage/Estudiante")
+        }else{
+          alert('contraseña o usuario incorrecto')
         }
     })}
 
-  return[isLogin,search];
+
+    const searchTeacher = (nameLogin, password) => {fetch("http://localhost:3001/api/loginDocente/"+nameLogin+'/'+password)
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+          if(response){
+              setIsLogin(true);
+              navigate("/HomePage/Docente")
+          }else{
+            alert('contraseña o usuario incorrecto')
+          }
+    })}
+
+  return[isLogin,search,searchTeacher];
 }
