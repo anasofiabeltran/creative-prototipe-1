@@ -5,7 +5,7 @@ export const HookLogin = () => {
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
-  const search = (nameLogin, password) => {fetch("http://localhost:3001/api/consultarDatosEstudiante/"+nameLogin+'/'+password)
+  const search = (nameLogin, password) => {fetch("https://creativebackend.herokuapp.com/api/consultarDatosEstudiante/"+nameLogin+'/'+password)
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => {
@@ -22,7 +22,7 @@ export const HookLogin = () => {
     })}
 
 
-    const searchTeacher = (nameLogin, password) => {fetch("http://localhost:3001/api/loginDocente/"+nameLogin+'/'+password)
+    const searchTeacher = (nameLogin, password) => {fetch("https://creativebackend.herokuapp.com/api/loginDocente/"+nameLogin+'/'+password)
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => {

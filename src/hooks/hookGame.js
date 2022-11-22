@@ -16,7 +16,7 @@ export const HookGame = () => {
     }
 
     const obtainGame= (nameGame) => {
-        fetch("http://localhost:3001/api/consultarDatosJuego", {
+        fetch("https://creativebackend.herokuapp.com/api/consultarDatosJuego", {
             method: 'POST',
             body: JSON.stringify({"gameName":nameGame}), 
             headers: {

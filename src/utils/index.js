@@ -1,7 +1,7 @@
 //url base
 //let BASE = "https://infinite-cove-11379.herokuapp.com/api/"
-let BASE = "http://localhost:3001/api";
-//let BASE = "https://creativebackend.herokuapp.com/api";
+//let BASE = "http://localhost:3001/api";
+let BASE = "https://creativebackend.herokuapp.com/api";
 
 
 function createUser(user,url){
@@ -54,7 +54,7 @@ function getGame(game,url){
 }
 
 function qualifyActivity(grade){
-    fetch("http://localhost:3001/api/calificar", {
+    fetch("https://creativebackend.herokuapp.com/api/calificar", {
         method: 'POST',
         body: JSON.stringify(grade), 
         headers: {
