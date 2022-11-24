@@ -8,11 +8,11 @@ import {qualifyActivity} from "../../utils/index"
 
 
 function PlayGame(){
-    const [obtainGame,questions] = HookGame();
+    const [obtainGame,questions,creator] = HookGame();
     const name = useParams();
     const [user,setUser] = useState({})
     function showGrade(){
-        qualifyActivity({"grade": (document.getElementById('numberGrade').value*5)/questions.length,"creator":"ana","responder":user.nombre,"test": name.game})
+        qualifyActivity({"grade": (document.getElementById('numberGrade').value*5)/questions.length,"creator":creator,"responder":user.nombre,"test": name.game})
     }
 
     useEffect(()=>{
@@ -28,7 +28,7 @@ function PlayGame(){
             <p>Nombre juego: {name.game}</p>
             <input id="numberGrade" value="0" readOnly/>
             <div className="playGame-interactivityImage"> 
-                <img className="interactivityImage" src={interactividad} alt="interactividad juego"/>
+                <img id="interactivityImage-img" className="interactivityImage" src={interactividad} alt="interactividad juego"/>
             </div>
             {questions}
             <button onClick={showGrade}>Finalizar</button>
