@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./createGameCss.css"
 import {Link} from "react-router-dom";
 import fornite from "../../assets/img/fornite.png"
 
 function CreateGame(){
-   
+    const [user,setUser]= useState("")
+
+    useEffect(()=>{
+        setUser(JSON.parse(localStorage.getItem('user')).tipo)      
+    }, [])
+
     return(
         <section className="createGameMenu">
             <div>
@@ -41,7 +46,7 @@ function CreateGame(){
                 }
                 
             </div>
-            <Link className="buttonLink" to="/HomePage">Cancelar</Link> 
+            <Link className="buttonLink" to={`/HomePage/${user}`}>Cancelar</Link> 
         </section>
     );
 }

@@ -9,10 +9,12 @@ import { HookGrades } from "../../hooks/hookGrades";
 function SeeGrades(){
     const [isOpenModal1, openModal1, closeModal1] = UseModal(false);
     const [user, setUser] = useState("")
+    const [tipeUser, setTipeUser] = useState("")
     const [grades] = HookGrades(user);
 
     useEffect(()=>{
-        setUser(JSON.parse(localStorage.getItem('user')).nombre)      
+        setUser(JSON.parse(localStorage.getItem('user')).nombre)
+        setTipeUser(JSON.parse(localStorage.getItem('user')).tipo)       
     }, [])
 
     return(
@@ -27,8 +29,7 @@ function SeeGrades(){
                     {grades}
                 </Modal>
             </div>
-            
-            <Link className="buttonLink homePage-exitButton" to="/HomePage">Cancelar</Link> 
+            <Link className="buttonLink homePage-exitButton" to={`/HomePage/${tipeUser}`}>Cancelar</Link> 
             
         </section>
     );

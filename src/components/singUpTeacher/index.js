@@ -1,12 +1,16 @@
 import {createUser} from "../../utils/index"
-import React, {useState} from "react";
+import React, {useEffect,useState} from "react";
 import '../singUpEstudent/singUpEstudentCss.css'
 import {Link} from "react-router-dom";
 
 
 function SingUpTeacher(){
     const [user, setUser] = useState({ });
+    const [tipeUser, setTipeUser] = useState("")
 
+    useEffect(()=>{
+        setTipeUser(JSON.parse(localStorage.getItem('user')).tipo)       
+    }, [])
 
     function singUpTeacher() {
 
@@ -75,7 +79,7 @@ function SingUpTeacher(){
                     {/*<Link className="buttonLink" to="/HomePage">Registrar</Link>*/}
                     
                     <button type="button" onClick={singUpTeacher}>
-                        <Link className="buttonLink" to="/HomePage">Registrar</Link>
+                        <Link className="buttonLink" to={`/HomePage/${tipeUser}`}>Registrar</Link> 
                     </button>
                     <button>
                         <Link className="buttonLink" to="/PrincipalPage">cancelar</Link>

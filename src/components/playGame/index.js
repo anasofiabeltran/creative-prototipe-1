@@ -24,7 +24,7 @@ function PlayGame(){
 
     return(
         <section className="playGame">
-            <Link className="buttonLink playGame-exitButton " to="/HomePage">Cancelar</Link> 
+            <Link className="buttonLink playGame-exitButton " to={`/HomePage/${user.tipo}`}>Cancelar</Link> 
             <p>Nombre juego: {name.game}</p>
             <input id="numberGrade" value="0" readOnly/>
             <div className="playGame-interactivityImage"> 
