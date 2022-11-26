@@ -112,14 +112,6 @@ function TemplateGame(){
                     <Canvas gamename={game} selectedQuestion={selectQuestion} questions={createdQuestions}/>
                 </div>
             </div>
-                <button className="buttonModal" onClick={openModalCompartir}>
-                COMPARTIR
-                </button>
-                <Modal isOpen={isOpenModalCompartir} closeModal={closeModalCompartir}>
-                    <h3>Compartir con</h3>
-                    <input placeholder="compartir con..." />
-                    <button>Enviar</button>
-                </Modal>
  
                 <Link className="buttonLink" to="/CreateGame">Cancelar</Link> 
         

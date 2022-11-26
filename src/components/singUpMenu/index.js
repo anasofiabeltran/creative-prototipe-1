@@ -17,10 +17,6 @@ function SingUpMenu(){
                 </Link>
             
             
-                <Link className="buttonLink" to="/singUpEstudent">
-                    Independiente
-                </Link>
-            
                 <Link className="buttonLink" to="/PrincipalPage">
                     Cancelar
                 </Link>

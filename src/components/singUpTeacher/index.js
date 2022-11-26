@@ -8,10 +8,6 @@ function SingUpTeacher(){
     const [user, setUser] = useState({ });
     const [tipeUser, setTipeUser] = useState("")
 
-    useEffect(()=>{
-        setTipeUser(JSON.parse(localStorage.getItem('user')).tipo)       
-    }, [])
-
     function singUpTeacher() {
 
         const userName= document.getElementById("Nombre").value;
@@ -35,7 +31,24 @@ function SingUpTeacher(){
                 "cedula": cedula
             }
         )
-        createUser(user,'/registrarProfesor');
+        
+        localStorage['user'] = JSON.stringify({
+            "tipo":"Docente",
+            "nombre":cedula
+          });
+
+        setTipeUser(JSON.parse(localStorage.getItem('user')).tipo)  
+
+        createUser({
+            "nombre": userName,
+            "celular":numPhone,
+            "institucion":Institucion,
+            "apellido":userLastname,
+            "correo":email,
+            "cargo":cargo,
+            "contrasena":password,
+            "cedula": cedula
+        },'/registrarProfesor');
     }
     return(
         <div className="singUpEstudent">
@@ -79,7 +92,7 @@ function SingUpTeacher(){
                     {/*<Link className="buttonLink" to="/HomePage">Registrar</Link>*/}
                     
                     <button type="button" onClick={singUpTeacher}>
-                        <Link className="buttonLink" to={`/HomePage/${tipeUser}`}>Registrar</Link> 
+                        <Link className="buttonLink" to={`/HomePage/Docente`}>Registrar</Link> 
                     </button>
                     <button>
                         <Link className="buttonLink" to="/PrincipalPage">cancelar</Link>

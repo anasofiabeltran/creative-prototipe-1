@@ -31,12 +31,16 @@ function Canvas(props){
             return(
                 <section className="canvas">
                     <p> pregunta seleccionada {props.selectedQuestion}</p>
-                    <button onClick={addQuestion}>EDITAR</button>
+                    <button onClick={addQuestion}>Guardar pregunta</button>
                     <br />
+                    <p>Recuerde que para guardar una pregunta... debe darle click al boton "Guardar pregunta"</p>
+                    <p>Si no lo hace, la pregunta no se guardara</p>
                     <div className="canvas-interactive_resourse">
                         <textarea id="statementQuestion" value={props.questions.preguntas[props.selectedQuestion-1].pregunta} className="inputQuestion" />
                     </div>
                     <div className="canvas-questions">
+                    <p>Para establecer la respuesta correcta, de click en el cuadro encima de la respuesta que decida sera la correcta</p>
+                    <p>SOLAMENTE PUEDE SELECCIONAR UNA</p>
                         <div>
                             <p>La respuesta seleccionada como la correcta es la: {props.questions.preguntas[props.selectedQuestion-1].respuesta+1}</p>
                         </div>
@@ -63,12 +67,16 @@ function Canvas(props){
         return(
             <section className="canvas">
                 <p> pregunta seleccionada {props.selectedQuestion}</p>
-                <button onClick={addQuestion}>EDITAR</button>
+                <button onClick={addQuestion}>Guardar pregunta</button>
                 <br />
+                <p>Recuerde que para guardar una pregunta... debe darle click al boton "Guardar pregunta"</p>
+                <p>Si no lo hace, la pregunta no se guardara</p>
                 <div className="canvas-interactive_resourse">
                     <textarea id="statementQuestion" placeholder="Insertar:" className="inputQuestion" />
                 </div>
                 <div className="canvas-questions">
+                    <p>Para establecer la respuesta correcta, de click en el cuadro encima de la respuesta que decida sera la correcta</p>
+                    <p>SOLAMENTE PUEDE SELECCIONAR UNA</p>
                     <div>
                         <p>Esta es la respuesta correcta: </p>
                         <input onChange={() => setCorrectAnswer(0)}  type="checkbox"/>
